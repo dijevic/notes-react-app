@@ -9,6 +9,7 @@ import {
 import { login } from '../actions/auth';
 import { startLoadingNotes } from '../actions/notes';
 import { JournalScreen } from '../components/journal/JournalScreen';
+import { Loader } from '../components/loader/Loader';
 import { AuthRouter } from './AuthRouter';
 import { PrivateRoute } from './PrivateRoute';
 import { PublicRoute } from './publicRoute';
@@ -43,7 +44,7 @@ export const AppRouter = () => {
 
 
     if (checking) {
-        return <p className="auth__loading">loading... wait a minut.</p>
+        return <Loader message='loading ...wait a minute' />
     }
     return (
         <Router>

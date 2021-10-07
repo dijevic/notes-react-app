@@ -100,6 +100,18 @@ export const startUploadImg = (file) => {
         })
 
         try {
+            const types = ['image/svg+xml', 'image/jpeg', 'image/png']
+
+            if (!types.includes(file.type)) {
+                Swal.close()
+                return Swal.fire({
+                    title: 'Error!',
+                    text: 'something went wrong with your file :(',
+                    icon: 'error',
+                    confirmButtonText: 'Ok'
+                })
+            }
+
 
             const uploadFileCloud = await uploadFile(file)
             activeNote.img = uploadFileCloud

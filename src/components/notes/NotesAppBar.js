@@ -10,8 +10,12 @@ export const NotesAppBar = () => {
         dispatch(startSavingNote(active))
 
     }
+
+
+
     const handleFileChange = (e) => {
         const file = e.target.files[0]
+
         dispatch(startUploadImg(file))
     }
     const handleUpload = () => {
