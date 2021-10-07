@@ -1,0 +1,636 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,300;1,900&display=swap");
+* {
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+  text-decoration: none;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  color: #000;
+  outline: none;
+  font-family: "Lato";
+  font-size: 16px;
+}
+
+body {
+  height: 100vh;
+  max-height: 100vh;
+}
+
+@-webkit-keyframes movinon {
+  0% {
+    -webkit-transform: rotate(5deg);
+            transform: rotate(5deg);
+  }
+  100% {
+    -webkit-transform: rotate(-10deg);
+            transform: rotate(-10deg);
+  }
+}
+
+@keyframes movinon {
+  0% {
+    -webkit-transform: rotate(5deg);
+            transform: rotate(5deg);
+  }
+  100% {
+    -webkit-transform: rotate(-10deg);
+            transform: rotate(-10deg);
+  }
+}
+
+.auth__main {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 60% 1fr;
+      grid-template-columns: 60% 1fr;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+  height: 95vh;
+  max-height: 95vh;
+}
+
+.auth_background {
+  background: -webkit-gradient(linear, left top, right top, color-stop(0, #21295c), to(rgba(28, 114, 147, 0.6))), url("/src/assets/images/envio-37_adobespark.png");
+  background: linear-gradient(90deg, #21295c 0, rgba(28, 114, 147, 0.6) 100%), url("/src/assets/images/envio-37_adobespark.png");
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-position-y: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  -webkit-clip-path: polygon(100% 0, 80% 45%, 100% 100%, 0 100%, 0 0);
+          clip-path: polygon(100% 0, 80% 45%, 100% 100%, 0 100%, 0 0);
+}
+
+.auth_background h2 {
+  font-size: 62px;
+  line-height: 54px;
+  color: #fff;
+  font-style: italic;
+  font-weight: 900;
+  letter-spacing: 2px;
+  text-shadow: 2px 2px 2px #000;
+}
+
+.auth_container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
+  width: 100%;
+  background: #fff;
+}
+
+.auth_box {
+  background: #fff;
+  -webkit-box-shadow: 2px 2px 5px #21295c;
+          box-shadow: 2px 2px 5px #21295c;
+  padding: 35px;
+  border-radius: 10px;
+  max-width: 70%;
+}
+
+.auth__input {
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 10px;
+  border: none;
+  border-bottom: 1px solid #9eb3c2;
+  -webkit-transition: 0.4s ease-in-out;
+  transition: 0.4s ease-in-out;
+  font-weight: 400;
+}
+
+.auth__input:focus {
+  outline: none;
+  border-bottom: 1px solid #1c7293;
+}
+
+.auth__title {
+  font-size: 32px;
+  margin-bottom: 20px;
+  color: #1c7293;
+  font-weight: 700;
+}
+
+.auth__p {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.auth__register-login-button {
+  display: block;
+  margin-top: 20px;
+  color: #1c7293;
+}
+
+.auth__register-login-button:hover {
+  -webkit-text-decoration: underline #1c7293;
+          text-decoration: underline #1c7293;
+  -webkit-transition: 0.6s ease-in-out;
+  transition: 0.6s ease-in-out;
+}
+
+.auth__error-alert {
+  background: #1c7293;
+  color: #fff;
+  height: 35px;
+  text-align: center;
+  border-radius: 5px;
+  -webkit-animation-name: pulse;
+          animation-name: pulse;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-iteration-count: initial;
+          animation-iteration-count: initial;
+}
+
+.auth__error-alert p {
+  padding: 10px;
+  color: #fff;
+}
+
+.pulse {
+  -webkit-animation-name: pulse;
+          animation-name: pulse;
+  -webkit-animation-duration: 0.6s;
+          animation-duration: 0.6s;
+  -webkit-animation-iteration-count: initial;
+          animation-iteration-count: initial;
+}
+
+.fadeInUp {
+  -webkit-animation-name: fadeInLeft;
+          animation-name: fadeInLeft;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-iteration-count: initial;
+          animation-iteration-count: initial;
+}
+
+.button {
+  background: transparent;
+  outline: none;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 7px;
+  font-size: 18px;
+  -webkit-transition: 0.6s ease all;
+  transition: 0.6s ease all;
+  cursor: pointer;
+}
+
+.auth__btn {
+  width: 50%;
+  text-align: center;
+  margin: 20px auto;
+  background: #1c7293;
+  color: #fff;
+  -webkit-transform: translateX(50%);
+          transform: translateX(50%);
+  border: 1px solid transparent;
+}
+
+.auth__btn:hover {
+  opacity: 0.9;
+  -webkit-box-shadow: 2px 2px 5px rgba(28, 114, 147, 0.6);
+          box-shadow: 2px 2px 5px rgba(28, 114, 147, 0.6);
+}
+
+.auth__btn:disabled {
+  opacity: 0.5;
+}
+
+.auth__btn:disabled:hover {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.btn-danger {
+  background: red;
+  color: #fff;
+  padding: 2px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  border: none;
+  -webkit-transition: 0.6s ease all;
+  transition: 0.6s ease all;
+}
+
+.btn-danger:hover {
+  opacity: 0.7;
+}
+
+.google-btn {
+  cursor: pointer;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  width: 100%;
+  height: 42px;
+  background-color: #1c7293;
+  border-radius: 7px;
+  -webkit-box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.25);
+          box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.25);
+  -webkit-transition: -webkit-box-shadow 0.3s ease;
+  transition: -webkit-box-shadow 0.3s ease;
+  transition: box-shadow 0.3s ease;
+  transition: box-shadow 0.3s ease, -webkit-box-shadow 0.3s ease;
+}
+
+.google-btn .google-icon-wrapper {
+  position: absolute;
+  margin-top: 1px;
+  margin-left: 1px;
+  width: 40px;
+  height: 40px;
+  border-radius: 2px;
+  background-color: #fff;
+}
+
+.google-btn .google-icon {
+  position: absolute;
+  margin-top: 11px;
+  margin-left: 11px;
+  width: 18px;
+  height: 18px;
+  border-radius: 7px;
+}
+
+.google-btn .btn-text {
+  float: right;
+  margin: 11px 40px 0 0;
+  color: #fff;
+  font-size: 14px;
+  letter-spacing: 0.2px;
+}
+
+.google-btn .btn-text b {
+  color: #fff;
+  font-weight: 400;
+}
+
+.google-btn:hover {
+  -webkit-box-shadow: 0 0 6px #4285f4;
+          box-shadow: 0 0 6px #4285f4;
+}
+
+.google-btn:active {
+  background: #1669f2;
+}
+
+.journal__main {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 40% 1fr;
+      grid-template-columns: 40% 1fr;
+  width: 100%;
+  height: 95vh;
+}
+
+.journal__sidebar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-image: -webkit-gradient(linear, left top, right top, color-stop(0, #21295c), to(rgba(28, 114, 147, 0.6)));
+  background-image: linear-gradient(90deg, #21295c 0, rgba(28, 114, 147, 0.6) 100%);
+  padding: 20px;
+  height: 100%;
+  height: 100vh;
+  color: #fff;
+  font-weight: 400;
+}
+
+.journal__sidebar-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.journal__sidebar-nav h3 span, .journal__sidebar-nav h3 .notes__notesappbar button, .notes__notesappbar .journal__sidebar-nav h3 button {
+  color: #fff;
+  font-size: 16px;
+  line-height: 16px;
+}
+
+.journal__sidebar-nav h3 i {
+  color: yellow;
+  display: inline-block;
+  margin-right: 10px;
+  font-size: 16px;
+  line-height: 16px;
+}
+
+.journal__sidebar-nav .button {
+  color: #fff;
+  font-weight: 700;
+  border-radius: 5px;
+  font-size: 18px;
+  -webkit-box-shadow: 2px 2px 5px #000;
+          box-shadow: 2px 2px 5px #000;
+  background-image: linear-gradient(45deg, #21295c 0, rgba(28, 114, 147, 0.6) 100%);
+  -webkit-transition: 0.4s ease all;
+  transition: 0.4s ease all;
+}
+
+.journal__sidebar-nav .button:hover {
+  background-image: linear-gradient(45deg, rgba(28, 114, 147, 0.6) 0, #21295c 100%);
+}
+
+.journal__sidebar-new-entry {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+  margin-top: 25px;
+  cursor: pointer;
+  -webkit-transition: 0.6s ease-in-out;
+  transition: 0.6s ease-in-out;
+}
+
+.journal__sidebar-new-entry i {
+  color: #fff;
+  -webkit-animation-name: movinon;
+          animation-name: movinon;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate;
+}
+
+.journal__sidebar-new-entry i:hover {
+  -webkit-animation-name: none;
+          animation-name: none;
+  color: #e6e6e6;
+}
+
+.journal__sidebar-new-entry span, .journal__sidebar-new-entry .notes__notesappbar button, .notes__notesappbar .journal__sidebar-new-entry button {
+  margin-top: 20px;
+  color: #fff;
+  font-weight: 700;
+}
+
+.journal__entries {
+  overflow-y: scroll;
+  margin-top: 25px;
+  padding: 10px;
+}
+
+.journal__entries::-webkit-scrollbar {
+  width: 7px;
+}
+
+.journal__entries::-webkit-scrollbar-thumb {
+  background-color: #fff;
+  border-radius: 10px;
+}
+
+.journal__entry {
+  background: #fff;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 100px;
+  cursor: pointer;
+  -webkit-animation-name: fadeInLeft;
+          animation-name: fadeInLeft;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  -webkit-animation-iteration-count: initial;
+          animation-iteration-count: initial;
+}
+
+.journal__entry-img {
+  min-width: 20%;
+  width: 100px;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  background-size: cover;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+.journal__entry-body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  padding: 10px 15px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.journal__entry-titulo {
+  font-size: 14px;
+  font-weight: 700;
+  padding-bottom: 5px;
+  border-bottom: 1px solid yellow;
+}
+
+.journal__entry-mainContent {
+  font-weight: 400;
+  font-size: 12px;
+}
+
+.journal__entry-date {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 20px;
+}
+
+.journal__entry-date span, .journal__entry-date .notes__notesappbar button, .notes__notesappbar .journal__entry-date button {
+  font-size: 14px;
+  font-weight: 900;
+}
+
+.journal__entry-date h4 {
+  font-size: 12px;
+  font-weight: 900;
+}
+
+.nothingSeleted__main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  height: 100vh;
+}
+
+.nothingSeleted__main p {
+  font-size: 20px;
+  color: #000;
+  letter-spacing: 5px;
+  line-height: 16px;
+  margin-bottom: 5px;
+  -webkit-animation-name: pulse;
+          animation-name: pulse;
+  -webkit-animation-duration: 0.8s;
+          animation-duration: 0.8s;
+  -webkit-animation-iteration-count: initial;
+          animation-iteration-count: initial;
+}
+
+.nothingSeleted__main p br {
+  margin-bottom: 5px;
+  display: inile-block;
+}
+
+.nothingSeleted__main i {
+  color: #1c7293;
+  -webkit-animation-name: heartBeat;
+          animation-name: heartBeat;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-iteration-count: initial;
+          animation-iteration-count: initial;
+}
+
+.notes__main {
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.notes__notesappbar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  color: #fff;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background-image: -webkit-gradient(linear, left top, right top, color-stop(0, rgba(28, 114, 147, 0.6)), to(#21295c));
+  background-image: linear-gradient(90deg, rgba(28, 114, 147, 0.6) 0, #21295c 100%);
+  padding: 20px;
+}
+
+.notes__notesappbar span, .notes__notesappbar button {
+  font-size: 18px;
+  color: #fff;
+}
+
+.notes__notesappbar button {
+  margin-right: 10px;
+  -webkit-transition: 1s ease all;
+  transition: 1s ease all;
+  -webkit-box-shadow: 2px 2px 5px #000;
+          box-shadow: 2px 2px 5px #000;
+  background-image: linear-gradient(45deg, #21295c 0, rgba(28, 114, 147, 0.6) 100%);
+}
+
+.notes__notesappbar button:hover {
+  background-image: linear-gradient(45deg, rgba(28, 114, 147, 0.6) 0, #21295c 100%);
+}
+
+.notes__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 25px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: relative;
+  height: 90%;
+}
+
+.notes__content .notes__title-input {
+  font-size: 32px;
+  line-height: 26px;
+  padding: 20px;
+  border: none;
+  font-weight: 900;
+  border-bottom: 2px dashed gray;
+  color: #000;
+}
+
+.notes__content .notes__textarea {
+  width: 100%;
+  resize: none;
+  display: block;
+  border: none;
+  padding: 25px;
+  font-size: 18px;
+  line-height: 18px;
+}
+
+.notes__content img {
+  width: 200px;
+  height: 200px;
+  margin-top: -39px;
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  border-radius: 5px;
+}
+/*# sourceMappingURL=styles.min.css.map */

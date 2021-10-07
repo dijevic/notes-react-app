@@ -1,0 +1,78 @@
+.notes__main {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+.notes__notesappbar {
+  display: flex;
+  color: #fff;
+  align-items: center;
+  justify-content: space-between;
+  background-image: linear-gradient(
+    90deg,
+    rgba($color: $primary-color, $alpha: 0.6) 0,
+    $dark-blue 100%
+  );
+
+  padding: 20px;
+
+  span {
+    font-size: 18px;
+    color: #fff;
+  }
+  button {
+    @extend span;
+    margin-right: 10px;
+    transition: 1s ease all;
+    box-shadow: 2px 2px 5px #000;
+    background-image: linear-gradient(
+      45deg,
+      $dark-blue 0,
+      rgba($color: $primary-color, $alpha: 0.6) 100%
+    );
+    &:hover {
+      background-image: linear-gradient(
+        45deg,
+        rgba($color: $primary-color, $alpha: 0.6) 0,
+        $dark-blue 100%
+      );
+    }
+  }
+}
+
+.notes__content {
+  display: flex;
+  margin-top: 25px;
+  flex-direction: column;
+  position: relative;
+
+  height: 90%;
+
+  .notes__title-input {
+    font-size: 32px;
+    line-height: 26px;
+    padding: 20px;
+    border: none;
+    font-weight: 900;
+    border-bottom: 2px dashed lighten(#000000, 50);
+    color: #000;
+  }
+  .notes__textarea {
+    width: 100%;
+    resize: none;
+    display: block;
+    border: none;
+    padding: 25px;
+    font-size: 18px;
+    line-height: 18px;
+  }
+  img {
+    width: 200px;
+    height: 200px;
+    margin-top: -39px;
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    border-radius: 5px;
+  }
+}

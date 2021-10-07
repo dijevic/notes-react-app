@@ -1,0 +1,43 @@
+.button {
+  background: transparent;
+  outline: none;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 7px;
+  font-size: 18px;
+  transition: 0.6s ease all;
+  cursor: pointer;
+}
+.auth__btn {
+  width: 50%;
+  text-align: center;
+  margin: 20px auto;
+  background: $primary-color;
+  color: #fff;
+  transform: translateX(50%);
+
+  border: 1px solid transparent;
+  &:hover {
+    opacity: 0.9;
+    box-shadow: 2px 2px 5px rgba($color: $primary-color, $alpha: 0.6);
+  }
+  &:disabled {
+    opacity: 0.5;
+    &:hover {
+      box-shadow: none;
+    }
+  }
+}
+
+.btn-danger {
+  background: red;
+  color: #fff;
+  padding: 2px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  border: none;
+  transition: 0.6s ease all;
+  &:hover {
+    opacity: 0.7;
+  }
+}

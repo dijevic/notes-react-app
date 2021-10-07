@@ -1,0 +1,29 @@
+.nothingSeleted__main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+
+  p {
+    font-size: 20px;
+    color: #000;
+    letter-spacing: 5px;
+    line-height: 16px;
+    margin-bottom: 5px;
+    animation-name: pulse;
+    animation-duration: 0.8s;
+    animation-iteration-count: initial;
+
+    br {
+      margin-bottom: 5px;
+      display: inile-block;
+    }
+  }
+  i {
+    color: $primary-color;
+    animation-name: heartBeat;
+    animation-duration: 1s;
+    animation-iteration-count: initial;
+  }
+}
