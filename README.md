@@ -1,5 +1,5 @@
 <h1 align="center">  Notes React App </h1>
-<h3 color="red" align="center">A React app to write and keep keep notes</h3>
+<h3 color="red" align="center">A React app to write and save notes</h3>
 
  <br/>
 
